@@ -2,10 +2,11 @@
 /**
  * Write a description of class Main here.
  *
- * @author (Erick Teplale)
+ * @author (Erick Tepale)
  * @version (1.0 5/21/19)
  */
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main
 {
@@ -14,9 +15,12 @@ public class Main
      */
     public Main(String[] args)
     {
-        int mysteryNumber = 66;
-        int count = 1;
         Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+        
+        int mysteryNumber = rand.nextInt(100) + 1;
+        int count = 1;
+        System.out.println(mysteryNumber);
         
         System.out.println("Can you guess my mystery integer number? It is between 1 - 100");
         int guess = input.nextInt();
