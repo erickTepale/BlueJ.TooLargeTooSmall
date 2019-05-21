@@ -2,32 +2,33 @@
 /**
  * Write a description of class Main here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Erick Teplale)
+ * @version (1.0 5/21/19)
  */
+import java.util.Scanner;
+
 public class Main
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class Main
      */
-    public Main()
+    public Main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        int mysteryNumber = 66;
+        int count = 1;
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Can you guess my mystery integer number? It is between 1 - 100");
+        int guess = input.nextInt();
+        
+        while(guess != mysteryNumber){
+            System.out.println( (guess < mysteryNumber) ? "Too Small Try Again." : "Too Large Try Again." );
+            count++;
+            guess = input.nextInt();
+        }
+        
+        
+        System.out.println("You Got It! It only took you " + count + 
+                            ( (count > 1) ? " times." : " time.") );
     }
 }
