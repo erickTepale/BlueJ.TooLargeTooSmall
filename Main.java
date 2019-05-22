@@ -22,7 +22,7 @@ public class Main
         int mysteryNumber = rand.nextInt(100) + 1;
         int count = 0;
         
-        System.out.println("Can you guess my mystery integer number? It is between 1 - 100" + mysteryNumber);
+        System.out.println("Can you guess my mystery integer number? It is between 1 - 100");
         int guess = input.nextInt();
         if(tempNumber != guess) count++;
             
